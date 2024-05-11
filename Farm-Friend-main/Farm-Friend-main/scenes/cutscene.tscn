@@ -1,0 +1,234 @@
+[gd_scene load_steps=12 format=3 uid="uid://dgqw6117xm7s6"]
+
+[ext_resource type="Texture2D" uid="uid://dl2fl0i6qh23e" path="res://assets/newAss/bus_door_close.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bmd37peo0gqvu" path="res://assets/newAss/busstop_in_field-pixilart.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://qbc8ow1hjeiv" path="res://assets/newAss/bus_door_open.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://c0evbbrie1vvo" path="res://assets/newAss/audio-editor-output.mp3" id="4"]
+[ext_resource type="Script" path="res://scripts/intro_cut.gd" id="4_dqpkr"]
+[ext_resource type="Texture2D" uid="uid://bhslcfvx3r633" path="res://assets/newAss/new_character-ezgif.com-crop.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://du7ced1del08y" path="res://assets/newAss/030822_leaves-rustling-in-wind-79518.mp3" id="6"]
+
+[sub_resource type="Animation" id="2"]
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.784314), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BusDoorClose:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 6.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-193.269, 467.862), Vector2(730, 467.862)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Character:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.1, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BusDoorClose/BusDoorOpen:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2, 9.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6")
+}],
+"times": PackedFloat32Array(-2.9)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4")
+}],
+"times": PackedFloat32Array(4)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="1"]
+resource_name = "cover_fade"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.784314), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BusDoorClose:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.3, 4.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-193.269, 467.862), Vector2(730, 467.862)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BusDoorClose/BusDoorOpen:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(7.3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6")
+}],
+"times": PackedFloat32Array(-1.8)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 1.63413,
+"start_offset": 0.0,
+"stream": ExtResource("4")
+}],
+"times": PackedFloat32Array(2.7)
+}
+tracks/4/use_blend = true
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Character:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Character:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mr6pi"]
+_data = {
+"RESET": SubResource("2"),
+"cover_fade": SubResource("1")
+}
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_a7nfd"]
+
+[node name="CutScene" type="Node2D"]
+
+[node name="Bus Stop" type="Sprite2D" parent="."]
+position = Vector2(579, 325)
+scale = Vector2(6.37778, 5.3)
+texture = ExtResource("2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mr6pi")
+}
+script = ExtResource("4_dqpkr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamPolyphonic_a7nfd")
+
+[node name="BusDoorClose" type="Sprite2D" parent="."]
+position = Vector2(-193.269, 467.862)
+scale = Vector2(5, 5)
+texture = ExtResource("1")
+
+[node name="BusDoorOpen" type="Sprite2D" parent="BusDoorClose"]
+visible = false
+position = Vector2(0, -7.62939e-06)
+texture = ExtResource("3")
+
+[node name="Character" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(763, 469)
+scale = Vector2(3, 3)
+texture = ExtResource("5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 48.0
+offset_bottom = 47.0
+scale = Vector2(25.657, 14.9831)
+color = Color(0, 0, 0, 0.784314)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

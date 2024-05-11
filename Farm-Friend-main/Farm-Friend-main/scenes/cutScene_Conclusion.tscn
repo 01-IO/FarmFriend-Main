@@ -1,0 +1,237 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxmh8y62tt11y"]
+
+[ext_resource type="AudioStream" uid="uid://bkj6qbjw2hai7" path="res://sounds/final_conclusion_mp3.mp3" id="1_egb6m"]
+[ext_resource type="FontFile" uid="uid://bgqidrc3ui5s7" path="res://assets/fonts/PixelOperator8.ttf" id="2_bep7r"]
+[ext_resource type="VideoStream" path="res://assets/Video Asset/Untitled video - Made with Clipchamp.ogv" id="2_co6ne"]
+[ext_resource type="Script" path="res://scenes/AnimationPlayer.gd" id="2_xogwa"]
+
+[sub_resource type="Animation" id="Animation_65pp7"]
+resource_name = "Conclusion"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Labels/msg1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Labels/msg1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5, 2, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Labels/msg2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4.5, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Labels/msg2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.5, 4.9, 7, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Labels/msg3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(7.5, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Labels/msg3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(7.5, 8, 10, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.04,
+"start_offset": 0.14,
+"stream": ExtResource("1_egb6m")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="Animation" id="Animation_nr16c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Labels/msg1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Labels/msg1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Labels/msg2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Labels/msg2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Labels/msg3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Labels/msg3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0chiy"]
+_data = {
+"Conclusion": SubResource("Animation_65pp7"),
+"RESET": SubResource("Animation_nr16c")
+}
+
+[node name="CutSceneConclusion" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0chiy")
+}
+script = ExtResource("2_xogwa")
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="msg1" type="Label" parent="Labels"]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+visibility_layer = 2
+offset_left = 51.0
+offset_top = 222.0
+offset_right = 1129.0
+offset_bottom = 423.0
+theme_override_fonts/font = ExtResource("2_bep7r")
+theme_override_font_sizes/font_size = 32
+text = "Stubble burning significantly contributes to air pollution, releasing a cocktail of harmful pollutants."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="msg2" type="Label" parent="Labels"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 51.0
+offset_top = 222.0
+offset_right = 1129.0
+offset_bottom = 423.0
+theme_override_fonts/font = ExtResource("2_bep7r")
+theme_override_font_sizes/font_size = 32
+text = "Making the air around us unbreathable, perhaps suffocating"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="msg3" type="Label" parent="Labels"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 51.0
+offset_top = 222.0
+offset_right = 1129.0
+offset_bottom = 423.0
+theme_override_fonts/font = ExtResource("2_bep7r")
+theme_override_font_sizes/font_size = 32
+text = "That is why we should prevent Stubble Burning.
+Help us save our environment"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1088.0
+stream = ExtResource("2_co6ne")
+autoplay = true
+loop = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

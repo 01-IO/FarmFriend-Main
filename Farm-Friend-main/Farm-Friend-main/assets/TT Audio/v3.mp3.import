@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jqp0yam4327q"
+path="res://.godot/imported/v3.mp3-7367cdeefa809009fde70e0cb8c7ef8c.mp3str"
+
+[deps]
+
+source_file="res://assets/TT Audio/v3.mp3"
+dest_files=["res://.godot/imported/v3.mp3-7367cdeefa809009fde70e0cb8c7ef8c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

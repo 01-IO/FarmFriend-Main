@@ -1,0 +1,569 @@
+[gd_scene load_steps=20 format=3 uid="uid://iose25ta62e3"]
+
+[ext_resource type="Texture2D" uid="uid://bhslcfvx3r633" path="res://assets/newAss/new_character-ezgif.com-crop.png" id="1_ie2yv"]
+[ext_resource type="AudioStream" uid="uid://bq48iu8e1cfhv" path="res://assets/TT Audio/n1.mp3" id="1_yg04e"]
+[ext_resource type="Texture2D" uid="uid://xthcgslax5s6" path="res://assets/newAss/villager_1_prototype_DSN.png" id="2_htpm5"]
+[ext_resource type="AudioStream" uid="uid://c2obmya2qj550" path="res://assets/TT Audio/v1.mp3" id="2_nrqli"]
+[ext_resource type="FontFile" uid="uid://bgqidrc3ui5s7" path="res://assets/fonts/PixelOperator8.ttf" id="3_g74y1"]
+[ext_resource type="AudioStream" uid="uid://bfuoff0qkuptb" path="res://assets/TT Audio/v2.mp3" id="3_ga5t0"]
+[ext_resource type="Texture2D" uid="uid://cpr41yd5eba6a" path="res://assets/bg image.jpg" id="4_vb61o"]
+[ext_resource type="AudioStream" uid="uid://eo1wm3ndotrx" path="res://assets/TT Audio/n2.mp3" id="4_y53bv"]
+[ext_resource type="AudioStream" uid="uid://cdusk6hs7vk5p" path="res://assets/TT Audio/n3.mp3" id="5_24qji"]
+[ext_resource type="AudioStream" uid="uid://jqp0yam4327q" path="res://assets/TT Audio/v3.mp3" id="6_4vmk5"]
+[ext_resource type="AudioStream" uid="uid://salk4n3ooi50" path="res://assets/TT Audio/v4.mp3" id="7_ht67c"]
+[ext_resource type="AudioStream" uid="uid://0l1n8pf5vp3w" path="res://assets/TT Audio/v5.mp3" id="8_m0a5g"]
+[ext_resource type="AudioStream" uid="uid://vlw5m76oggce" path="res://assets/TT Audio/v6.mp3" id="9_5v8sg"]
+[ext_resource type="AudioStream" uid="uid://dravl6kmi86d7" path="res://assets/TT Audio/n4.mp3" id="10_oyk14"]
+[ext_resource type="AudioStream" uid="uid://dorit0k3hn5ee" path="res://sounds/50_Secs_intro_mp3.mp3" id="11_3l710"]
+[ext_resource type="Script" path="res://scripts/dailogue.gd" id="11_5gpro"]
+
+[sub_resource type="Animation" id="Animation_h3g84"]
+resource_name = "Dialogue_manual"
+length = 48.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nakul:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.2, 1.5, 1.7, 2, 18.1, 18.3, 18.6, 18.8, 19.1, 42, 42.2, 42.5, 42.7, 43),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-128, 500), Vector2(102, 510), Vector2(102, 500), Vector2(102, 510), Vector2(102, 500), Vector2(102, 500), Vector2(102, 510), Vector2(102, 500), Vector2(102, 510), Vector2(102, 500), Vector2(102, 500), Vector2(102, 510), Vector2(102, 500), Vector2(102, 510), Vector2(102, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 5.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Villager:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.6, 6.2, 6.4, 6.7, 6.9, 24.8, 25.1, 25.3, 25.6, 25.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1307, 650), Vector2(1100, 660), Vector2(1100, 650), Vector2(1100, 660), Vector2(1100, 650), Vector2(1100, 660), Vector2(1100, 650), Vector2(1100, 660), Vector2(1100, 650), Vector2(1100, 660)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../v1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5.9, 11.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../v1:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5.9, 11.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../v2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 12.3, 18.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../v2:visible_ratio")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(12.3, 17.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../n2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 18.3, 22),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../n2:visible_ratio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(18.3, 21.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../n3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 22.3, 24.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../n3:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(22.3, 24.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../v3:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 25.1, 26.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../v3:visible_ratio")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(25.1, 26.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../v4:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 26.9, 30.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../v4:visible_ratio")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(26.9, 30.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../v5:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 30.7, 36.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../v5:visible_ratio")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(30.7, 36.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../v6:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 36.9, 41.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../v6:visible_ratio")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(36.9, 41.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../n4:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 42.5, 46),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../n4:visible_ratio")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(42.5, 45.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/22/type = "audio"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../AudioStreamPlayer2D")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"clips": [{
+"end_offset": 0.828801,
+"start_offset": 0.0,
+"stream": ExtResource("1_yg04e")
+}, {
+"end_offset": 0.988185,
+"start_offset": 0.111569,
+"stream": ExtResource("2_nrqli")
+}, {
+"end_offset": 0.988185,
+"start_offset": 0.111569,
+"stream": ExtResource("3_ga5t0")
+}, {
+"end_offset": 0.908493,
+"start_offset": 0.127508,
+"stream": ExtResource("4_y53bv")
+}, {
+"end_offset": 0.94037,
+"start_offset": 0.0956308,
+"stream": ExtResource("5_24qji")
+}, {
+"end_offset": 0.717231,
+"start_offset": 0.143446,
+"stream": ExtResource("6_4vmk5")
+}, {
+"end_offset": 0.892555,
+"start_offset": 0.127508,
+"stream": ExtResource("7_ht67c")
+}, {
+"end_offset": 0.876616,
+"start_offset": 0.0956308,
+"stream": ExtResource("8_m0a5g")
+}, {
+"end_offset": 0.94037,
+"start_offset": 0.0956308,
+"stream": ExtResource("9_5v8sg")
+}, {
+"end_offset": 0.892555,
+"start_offset": 0.111569,
+"stream": ExtResource("10_oyk14")
+}],
+"times": PackedFloat32Array(1, 5.91157, 12.3, 18.3, 22.3, 25.1, 26.9, 30.7, 36.9, 42.5)
+}
+tracks/22/use_blend = true
+tracks/23/type = "audio"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../bgm")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_3l710")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/23/use_blend = true
+
+[sub_resource type="Animation" id="Animation_aqtik"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nakul:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(237, 695)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8qi07"]
+_data = {
+"Dialogue_manual": SubResource("Animation_h3g84"),
+"RESET": SubResource("Animation_aqtik")
+}
+
+[node name="CutSceneDialogues" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+volume_db = -13.086
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../n1")
+libraries = {
+"": SubResource("AnimationLibrary_8qi07")
+}
+script = ExtResource("11_5gpro")
+
+[node name="Nakul" type="Sprite2D" parent="."]
+top_level = true
+visibility_layer = 2
+position = Vector2(237, 695)
+scale = Vector2(12.9565, 14.2083)
+texture = ExtResource("1_ie2yv")
+
+[node name="Villager" type="Sprite2D" parent="."]
+top_level = true
+visibility_layer = 2
+position = Vector2(1100, 652.875)
+scale = Vector2(12.22, 13.14)
+texture = ExtResource("2_htpm5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.329412)
+top_level = true
+offset_left = 201.0
+offset_top = 481.0
+offset_right = 920.0
+offset_bottom = 631.0
+
+[node name="n1" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 198.0
+offset_top = 485.0
+offset_right = 914.0
+offset_bottom = 631.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Nakul: Namaste dada, is there any way we can avoid burning the stubble?"
+autowrap_mode = 3
+text_direction = 1
+
+[node name="v1" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 203.0
+offset_top = 491.0
+offset_right = 917.0
+offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Villager: Namsakaar Nakul beta, yes there is a way to avoid, but it involves a lot of work."
+autowrap_mode = 3
+
+[node name="v2" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 199.0
+offset_top = 471.0
+offset_right = 920.0
+offset_bottom = 643.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Villager: I’ve would have done this myself but these knees can’t get much work done these days *cough**cough*"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="n2" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 199.0
+offset_top = 483.0
+offset_right = 910.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Nakul: Ah dada! Sure, I’ll take up the task. You don't worry."
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="n3" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 203.0
+offset_top = 485.0
+offset_right = 912.0
+offset_bottom = 631.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Nakul: What do I have to do?"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="v3" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 203.0
+offset_top = 484.0
+offset_right = 919.0
+offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Villager: Thanks beta
+"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="v4" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 193.0
+offset_top = 478.0
+offset_right = 918.0
+offset_bottom = 624.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Villager: First you need to collect all the stubble from the field
+"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="v5" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 200.0
+offset_top = 482.0
+offset_right = 914.0
+offset_bottom = 628.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Villager: Then stack it in the store, we can then use it to feed cattle or compost manure
+"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="v6" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 205.0
+offset_top = 489.0
+offset_right = 917.0
+offset_bottom = 635.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Villager: At times we can also use for roofing the old rooms in this village
+"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="n4" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 205.0
+offset_top = 486.0
+offset_right = 912.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("3_g74y1")
+theme_override_font_sizes/font_size = 32
+text = "Nakul: Okay dada! I will get it to it then.
+"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(575.562, 159)
+scale = Vector2(1.48384, 1.21255)
+texture = ExtResource("4_vb61o")
+metadata/_edit_lock_ = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

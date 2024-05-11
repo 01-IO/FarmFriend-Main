@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4at6eehf3sq6"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_1860j"]
+[ext_resource type="VideoStream" path="res://assets/background_menu.ogv" id="2_t3wk1"]
+[ext_resource type="AudioStream" uid="uid://dtkm52yuspkvy" path="res://sounds/Menu_audio.mp3" id="3_3itms"]
+[ext_resource type="Texture2D" uid="uid://dqmy8xakuuhp1" path="res://assets/logo.png" id="4_5c1nm"]
+
+[sub_resource type="FontVariation" id="FontVariation_w4o6y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_euxdm"]
+bg_color = Color(0.831373, 0.501961, 0.298039, 1)
+border_width_bottom = 5
+border_color = Color(1, 0.847059, 0.658824, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0uaq"]
+bg_color = Color(1, 0.752941, 0.470588, 1)
+border_width_bottom = 5
+border_color = Color(0.831373, 0.501961, 0.298039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_p3l2h"]
+Button/colors/font_color = Color(0.831373, 0.501961, 0.298039, 1)
+Button/font_sizes/font_size = 19
+Button/fonts/font = SubResource("FontVariation_w4o6y")
+Button/styles/hover = SubResource("StyleBoxFlat_euxdm")
+Button/styles/normal = SubResource("StyleBoxFlat_a0uaq")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_p3l2h")
+script = ExtResource("1_1860j")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_t3wk1")
+autoplay = true
+loop = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = 63.73
+offset_right = 68.0
+offset_bottom = 123.73
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit
+"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3itms")
+volume_db = -20.0
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(569, 292)
+scale = Vector2(1.43164, 1.36007)
+texture = ExtResource("4_5c1nm")
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
